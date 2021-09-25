@@ -40,8 +40,8 @@ function checkBookings() {
       var lossPercentage = ((loss)/(buyPrice*quantityNumber))*100;
       showOutput(`Oops! it's a loss of ${loss} and loss percentage is ${lossPercentage}%`,"red");
     } else if (buyPrice < sellPrice) {
-      var profit = (sellPrice - buyPrice) * quantityNumber;
-      var profitPercentage = ((profit)/(buyPrice*quantityNumber))*100;
+      var profit = Math.round((sellPrice - buyPrice) * quantityNumber);
+      var profitPercentage = Math.round(((profit)/(buyPrice*quantityNumber))*100);
       showOutput(`Yayy! it's a profit of ${profit} and profit percentage is ${profitPercentage}%`,"green");
     } else {
         showOutput("no pain no gain, no gain no pain","orange")

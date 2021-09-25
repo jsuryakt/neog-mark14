@@ -20,7 +20,7 @@
     <input id="buy" placeholder="in rupees" type="number"/>
     
     <label for="quantity">quantity</label>
-    <input id="quantity" placeholder="quantity" type="number"/>
+    <input id="quantity" placeholder="quantity" type="number" min="1" pattern="[0-9]" onkeypress="return !(event.charCode == 46)"/>
 
     <label for="sell">sell price</label>
     <input id="sell" placeholder="in rupees" type="number"/>
